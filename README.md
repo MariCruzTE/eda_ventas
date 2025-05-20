@@ -23,3 +23,33 @@
   - git add .
   - git commit -m "Descripción de los avances"
   - git push
+
+
+
+
+
+
+
+
+
+## Columnas
+'Invoice/Item Number'
+'Date', 'Store Number'
+'Store Name'
+'Store Location'
+'County Number'
+'County'
+'Category'
+'Category Name'
+'Vendor Number'
+'Vendor Name'
+'Item Number'
+'Item Description'
+'Pack'
+'Bottle Volume (ml)'
+'State Bottle Cost'
+'State Bottle Retail'
+'Bottles Sold'
+'Sale (Dollars)'
+'Volume Sold (Gallons)'
+
