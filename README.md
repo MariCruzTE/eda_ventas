@@ -10,7 +10,7 @@
 - Instalacion librerias pandas, seaborn y jupyter
 - Creación archivo requeriments.txt
 
-### Comando utilizados
+### Comandos utilizados
 
 - git clone url: traer el repo a local
 - Entorno virtual:
@@ -24,15 +24,11 @@
   - git commit -m "Descripción de los avances"
   - git push
 
-
-
-
-
-
-
+libreria nueva ast(import ast  )
 
 
 ## Columnas
+
 'Invoice/Item Number'
 'Date', 'Store Number'
 'Store Name'
