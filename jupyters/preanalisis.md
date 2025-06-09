@@ -26,8 +26,50 @@ galon = 3785.41 ml
 - `Category_name` y `category_number` 
   - no tienen el mismo numero de nulos (818, 284)
   - Se puede acceder a name a traves de number???
+  - Finalmente dejamos los nulos como están
 
 - `state_bottle_cost` , `state_bottle_retail` y `sale(dollars)` solo 10 nulos en cada columna, no se hace tratamiento de nulos, se dejan como tal
 
 - `latitude` y `longitude`
-  - 
+
+##  Análisis
+
+- Para analizar los datos lo mejor es generar visualizaciones.
+  - Diferentes tipos para numéricas y categóricas.
+- Creamos un df solo con las categóricas
+```python
+df_cat = df.select_dtypes(include='O)
+```
+- mejores visualizaciones para ver la distribucion de variables categóricas
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+- hacemos un subplot para ver todas las categóricas
+
+````python
+fig, axes = plt.subplots(5,2, figsize= (14,20))
+
+for col in df_cat.columns:
+     sns.countplot(data=df_cat, x=col, palette='mako', hue=col)
+     ```
+
+- coger una muestra mas pequeña para que no tarden tanto en ejecutarse 
+```python
+df = df.sample(2000) # tarda aprox 2 min
+df = df.sample(1000) # tarda aprox 1 min
+```
+
+```python
+fig, axes = plt.subplots(5,2, figsize= (14,20))
+
+axes = axes.flatten()
+
+for i,col in enumerate(df_cat.columns):
+     sns.countplot(data=df_cat, x=col, palette='mako', hue=col, ax=axes[i])
+     ```
+- Como no se ve nada, vamos a rotar  los ejes
+- Tampoco se ve, hacemos solo una columna con una visualizacion por fila
+- Abortamos mision analisis de categoricas con graficas, hay tantas variables que es imposible ver nada
